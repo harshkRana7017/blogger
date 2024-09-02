@@ -7,7 +7,8 @@ DATABASE_URL='postgresql+psycopg2://postgres:postgres@localhost:5433/Blogger'
 engine= create_engine(DATABASE_URL)
 
 # sessionFactory manmages transations and interactions with the DB
-SessionLocal= sessionmaker(autocomit=False, autoFlush=False, bind=engine)
+SessionLocal= sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base: DeclarativeMeta = declarative_base()
+
 
