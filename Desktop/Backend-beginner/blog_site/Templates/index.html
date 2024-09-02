@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{%block title %}My Blog{%endblock%}</title>
+  </head>
+  <body>
+    <header>
+      <h1>{%block heading %}Welcome to my Blog Page{%endblock%}</h1>
+      <nav>
+        <a href="{{ url_for('read_articles')}}">Articles</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Welcome, {{ user_name }}!</h1>
+
+      {%block content%} {%endblock%}
+    </main>
+    <footer>
+      <p>2024 My blog</p>
+    </footer>
+  </body>
+</html>
