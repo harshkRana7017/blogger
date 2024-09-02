@@ -1,0 +1,6 @@
+{% extends "index.html"%} {% block title %}Article{%endblock%} {%block content%}
+<h1><strong>Title=></strong>{{article.title}}</h1>
+<h2><strong>date:</strong>{{article.date}}</h2>
+<h2><strong>author:</strong>{{article.author}}</h2>
+<p><strong>{{article.content}}</strong></p>
+{%endblock%}

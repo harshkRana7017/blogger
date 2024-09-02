@@ -1,0 +1,20 @@
+{% extends "index.html"%} {% block title %}Article-Page{%endblock%} {% block
+heading %}Article-Page{%endblock%} {%block content%}
+<h1>Article List</h1>
+<ul>
+  {% for article in articles %}
+  <a href="{{url_for('read_article', article_id=article.id)}}"
+    ><u
+      ><h1><strong>Title=></strong>{{article.title}}</h1></u
+    ></a
+  >
+  <li>
+    <h2><strong>date:</strong>{{article.date}}</h2>
+  </li>
+  <li>
+    <h2><strong>author:</strong>{{article.author}}</h2>
+  </li>
+
+  {% endfor %}
+</ul>
+{%endblock%}
